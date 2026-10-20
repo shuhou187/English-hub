@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="English Hub — góc học tiếng Anh miễn phí dành cho học sinh lớp 6 đến lớp 9.">
+<title>English Hub — Học tiếng Anh dễ hơn</title>
+<style>
+:root{--bg:#f7f8fc;--card:#fff;--ink:#182230;--muted:#64748b;--line:#e7ebf2;--blue:#4263eb;--blue-soft:#eef2ff;--green:#16856b;--shadow:0 8px 30px rgba(26,39,68,.06)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+button,input,select{font:inherit}button,a{ -webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration:none}.wrap{width:min(1100px,92%);margin:auto}
+header{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:10px;font-size:1.1rem;font-weight:800;letter-spacing:-.4px}.logo{display:grid;place-items:center;width:38px;height:38px;background:var(--blue);color:#fff;border-radius:12px;font-weight:900}.navlinks{display:flex;gap:22px;color:var(--muted);font-size:.94rem}.navlinks a:hover{color:var(--blue)}.menu{display:none}
+.hero{padding:58px 0 36px}.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:7px;background:#e9f8f2;color:#14775f;padding:7px 12px;border-radius:999px;font-size:.83rem;font-weight:700}.hero h1{font-size:clamp(2.25rem,5vw,3.8rem);line-height:1.08;letter-spacing:-2px;margin:18px 0}.hero h1 span{color:var(--blue)}.hero p{color:var(--muted);font-size:1.08rem;max-width:600px;margin:0 0 24px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{border:0;border-radius:12px;padding:12px 18px;font-weight:750;cursor:pointer;transition:.15s}.btn:hover{transform:translateY(-1px)}.primary{background:var(--blue);color:white}.secondary{background:white;border:1px solid var(--line);color:var(--ink)}.hero-card{background:linear-gradient(145deg,#4263eb,#7188f5);border-radius:24px;padding:25px;color:white;box-shadow:0 18px 40px #4263eb30;position:relative;overflow:hidden}.hero-card:after{content:"Aa";position:absolute;right:-8px;bottom:-42px;font-size:9rem;font-weight:900;color:#ffffff18}.hero-card .small{opacity:.8;font-size:.85rem}.hero-card h2{font-size:1.65rem;line-height:1.2;margin:10px 0 22px}.mini-row{display:flex;gap:10px}.mini{background:#ffffff20;border:1px solid #ffffff30;border-radius:13px;padding:12px;flex:1}.mini b{display:block;font-size:1.3rem}.mini span{font-size:.78rem;opacity:.9}
+section{padding:30px 0 42px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:20px}.section-head h2{font-size:1.7rem;letter-spacing:-.7px;margin:0}.section-head p{color:var(--muted);margin:4px 0 0}.search{width:min(290px,100%);position:relative}.search input{width:100%;border:1px solid var(--line);border-radius:12px;padding:11px 13px 11px 38px;background:white;outline:none}.search input:focus{border-color:var(--blue);box-shadow:0 0 0 3px #4263eb18}.search span{position:absolute;left:13px;top:9px;color:var(--muted)}
+.grade-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.grade{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;cursor:pointer;text-align:left;box-shadow:var(--shadow);transition:.18s;color:inherit}.grade:hover,.grade.active{border-color:var(--blue);transform:translateY(-2px)}.grade.active{background:var(--blue-soft)}.grade-icon{width:43px;height:43px;display:grid;place-items:center;border-radius:13px;background:var(--blue-soft);color:var(--blue);font-weight:900;font-size:1.15rem}.grade h3{margin:13px 0 4px;font-size:1.1rem}.grade p{margin:0;color:var(--muted);font-size:.87rem}.grade .count{display:inline-block;margin-top:14px;color:var(--blue);font-size:.82rem;font-weight:750}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}.tab{padding:9px 14px;border:1px solid var(--line);border-radius:999px;background:white;color:var(--muted);cursor:pointer;font-weight:650}.tab.active{background:var(--ink);border-color:var(--ink);color:white}
+.lesson-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.lesson{background:white;border:1px solid var(--line);border-radius:16px;padding:19px;display:flex;flex-direction:column;min-height:190px}.lesson .tag{color:var(--blue);background:var(--blue-soft);font-size:.76rem;font-weight:800;border-radius:7px;padding:4px 8px;align-self:flex-start}.lesson h3{font-size:1.08rem;margin:13px 0 6px}.lesson p{color:var(--muted);font-size:.9rem;margin:0 0 16px}.lesson button{margin-top:auto;align-self:flex-start;background:none;border:0;color:var(--blue);font-weight:800;padding:0;cursor:pointer}
+.practice-layout{display:grid;grid-template-columns:1fr .8fr;gap:18px}.panel{background:white;border:1px solid var(--line);border-radius:18px;padding:23px}.panel h3{margin:0 0 7px}.panel .muted{color:var(--muted);font-size:.92rem;margin-top:0}.question{font-size:1.12rem;font-weight:750;margin:20px 0 14px}.answers{display:grid;gap:9px}.answer{padding:12px 14px;border:1px solid var(--line);border-radius:11px;background:white;text-align:left;cursor:pointer}.answer:hover{border-color:var(--blue)}.answer.correct{border-color:#1a9a71;background:#eaf8f2}.answer.wrong{border-color:#d9485f;background:#fff0f1}.feedback{min-height:26px;margin:12px 0;color:var(--muted);font-size:.9rem}.quiz-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px}.scorebox{background:#f7f8fc;border-radius:14px;padding:16px;margin-top:15px}.scorebox b{font-size:1.5rem}.word{font-size:1.5rem;font-weight:850;margin:15px 0 4px}.pron{color:var(--muted);font-size:.88rem}.word-meaning{padding:13px;background:#f7f8fc;border-radius:12px;margin:15px 0}.word-meaning b{display:block;margin-bottom:4px}.tip{background:#fff8e7;border:1px solid #f4e4b8;border-radius:14px;padding:15px;color:#775b13;font-size:.9rem;margin-top:14px}
+footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:.88rem}.footer-row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.empty{padding:28px;text-align:center;color:var(--muted);background:white;border:1px dashed var(--line);border-radius:14px;grid-column:1/-1}
+.modal-backdrop{position:fixed;inset:0;background:#11182788;z-index:10;display:none;align-items:center;justify-content:center;padding:18px}.modal-backdrop.show{display:flex}.modal{width:min(560px,100%);max-height:85vh;overflow:auto;background:white;border-radius:20px;padding:25px;box-shadow:0 20px 60px #0003}.modal-top{display:flex;justify-content:space-between;gap:14px;align-items:start}.close{border:0;background:#f1f3f8;border-radius:10px;width:36px;height:36px;cursor:pointer;font-size:1.2rem}.modal h2{margin:12px 0 8px}.modal p{color:var(--muted)}.modal-example{background:#f7f8fc;border-radius:12px;padding:14px;margin:14px 0}.modal-example b{display:block;margin-bottom:5px}
+@media(max-width:780px){.hero-grid{grid-template-columns:1fr}.hero{padding-top:38px}.hero-card{max-width:520px}.grade-grid{grid-template-columns:repeat(2,1fr)}.lesson-grid{grid-template-columns:repeat(2,1fr)}.practice-layout{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.search{width:100%}.navlinks{gap:12px}}
+@media(max-width:480px){.nav{height:62px}.navlinks{display:none}.menu{display:block;border:1px solid var(--line);background:white;border-radius:10px;padding:8px 10px}.navlinks.open{display:flex;position:absolute;top:62px;left:0;right:0;background:white;border-bottom:1px solid var(--line);padding:16px 4%;flex-direction:column}.hero h1{letter-spacing:-1.2px}.grade-grid,.lesson-grid{grid-template-columns:1fr}.grade{display:grid;grid-template-columns:45px 1fr;column-gap:12px;align-items:center}.grade-icon{grid-row:span 2}.grade h3{margin:0}.grade p{margin:3px 0}.grade .count{grid-column:2;margin-top:6px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="English Hub trang chủ"><span class="logo">E</span> English Hub</a>
+    <nav class="navlinks" id="navlinks"><a href="#grades">Chọn lớp</a><a href="#lessons">Bài học</a><a href="#practice">Luyện tập</a><a href="#vocab">Từ vựng</a></nav>
+    <button class="menu" id="menuBtn" aria-label="Mở menu">☰</button>
+  </div>
+</header>
+<main>
+  <div class="wrap hero" id="home">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">✦ Miễn phí · Dễ học · Dễ nhớ</span>
+        <h1>Học tiếng Anh<br><span>theo cách của bạn.</span></h1>
+        <p>Ôn ngữ pháp, mở rộng từ vựng và luyện tập mỗi ngày — dành cho học sinh từ lớp 6 đến lớp 9.</p>
+        <div class="actions"><a class="btn primary" href="#grades">Bắt đầu học <span aria-hidden="true">→</span></a><a class="btn secondary" href="#practice">Làm bài luyện tập</a></div>
+      </div>
+      <aside class="hero-card">
+        <div class="small">YOUR DAILY ENGLISH SPACE</div>
+        <h2>Mỗi ngày một chút,<br>tiến bộ từng ngày.</h2>
+        <div class="mini-row"><div class="mini"><b>4</b><span>Khối lớp</span></div><div class="mini"><b>12+</b><span>Chủ đề học</span></div><div class="mini"><b>0đ</b><span>Chi phí</span></div></div>
+      </aside>
+    </div>
+  </div>
+  <section id="grades"><div class="wrap">
+    <div class="section-head"><div><h2>Chọn lớp của bạn</h2><p>Nội dung được chia theo từng khối để dễ ôn tập.</p></div></div>
+    <div class="grade-grid" id="gradeGrid">
+      <button class="grade active" data-grade="6"><span class="grade-icon">06</span><h3>Tiếng Anh lớp 6</h3><p>Nền tảng và làm quen</p><span class="count">Bắt đầu học →</span></button>
+      <button class="grade" data-grade="7"><span class="grade-icon">07</span><h3>Tiếng Anh lớp 7</h3><p>Mở rộng kiến thức</p><span class="count">Bắt đầu học →</span></button>
+      <button class="grade" data-grade="8"><span class="grade-icon">08</span><h3>Tiếng Anh lớp 8</h3><p>Vững ngữ pháp hơn</p><span class="count">Bắt đầu học →</span></button>
+      <button class="grade" data-grade="9"><span class="grade-icon">09</span><h3>Tiếng Anh lớp 9</h3><p>Ôn tập và chuẩn bị thi</p><span class="count">Bắt đầu học →</span></button>
+    </div>
+  </div></section>
+  <section id="lessons"><div class="wrap">
+    <div class="section-head"><div><h2 id="lessonHeading">Bài học lớp 6</h2><p>Chọn chủ đề để xem phần tóm tắt và ví dụ.</p></div><label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Tìm bài học..." aria-label="Tìm bài học"></label></div>
+    <div class="tabs" id="lessonTabs"><button class="tab active" data-category="all">Tất cả</button><button class="tab" data-category="grammar">Ngữ pháp</button><button class="tab" data-category="vocab">Từ vựng</button><button class="tab" data-category="skills">Kỹ năng</button></div>
+    <div class="lesson-grid" id="lessonGrid"></div>
+  </div></section>
+  <section id="practice"><div class="wrap">
+    <div class="section-head"><div><h2>Luyện tập nhanh</h2><p>Thử sức với câu hỏi trắc nghiệm và xem giải thích ngay.</p></div></div>
+    <div class="practice-layout">
+      <div class="panel">
+        <h3>🧠 Kiểm tra kiến thức</h3><p class="muted">Câu hỏi ngẫu nhiên ở mức cơ bản.</p>
+        <div class="question" id="question">Choose the correct answer: She ___ to school every day.</div>
+        <div class="answers" id="answers"></div><div class="feedback" id="feedback" aria-live="polite">Chọn một đáp án để xem kết quả.</div>
+        <div class="quiz-bottom"><span class="muted" id="qCounter">Câu 1</span><button class="btn primary" id="nextQuestion">Câu tiếp theo →</button></div>
+      </div>
+      <div class="panel">
+        <h3>📈 Mục tiêu học tập</h3><p class="muted">Không cần học quá nhiều một lúc — hãy bắt đầu từ những điều nhỏ.</p>
+        <div class="scorebox"><span class="muted">Số câu trả lời đúng</span><br><b id="score">0</b> <span class="muted">câu</span></div>
+        <div class="tip">💡 <b>Mẹo nhỏ:</b> Đọc ví dụ thành tiếng, tự đặt một câu mới, rồi làm lại bài tập sau vài ngày để nhớ lâu hơn.</div>
+      </div>
+    </div>
+  </div></section>
+  <section id="vocab"><div class="wrap">
+    <div class="section-head"><div><h2>Từ vựng mỗi ngày</h2><p>Một vài từ phổ biến để bắt đầu luyện ghi nhớ.</p></div></div>
+    <div class="practice-layout">
+      <div class="panel"><span class="tag" style="color:var(--blue);font-weight:800">WORD OF THE DAY</span><div class="word" id="vocabWord">Improve</div><div class="pron" id="vocabPron">/ɪmˈpruːv/ · động từ</div><div class="word-meaning"><b>Nghĩa tiếng Việt</b><span id="vocabMeaning">cải thiện, tiến bộ</span></div><p id="vocabExample">I want to improve my English. — Tôi muốn cải thiện tiếng Anh của mình.</p><button class="btn secondary" id="nextWord">Từ tiếp theo ↗</button></div>
+      <div class="panel"><h3>📚 Cách học từ mới</h3><p class="muted">Học từ vựng hiệu quả hơn bằng cách dùng từ trong ngữ cảnh.</p><ol><li>Đọc từ và nghĩa.</li><li>Đọc câu ví dụ thành tiếng.</li><li>Tự viết một câu có chứa từ đó.</li><li>Ôn lại vào ngày hôm sau.</li></ol></div>
+    </div>
+  </div></section>
+</main>
+<footer><div class="wrap footer-row"><span><b>English Hub</b> · Cùng bạn học tốt tiếng Anh.</span><span>Miễn phí sử dụng · Không cần tài khoản</span></div></footer>
+<div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div class="modal-top"><div><span class="eyebrow" id="modalTag">NGỮ PHÁP</span></div><button class="close" id="closeModal" aria-label="Đóng">×</button></div><h2 id="modalTitle"></h2><div id="modalBody"></div></div></div>
+<script>
+const lessons = {
+6:[
+{cat:'grammar',tag:'NGỮ PHÁP',title:'Present simple',desc:'Thì hiện tại đơn: thói quen và sự thật hiển nhiên.',summary:'Dùng hiện tại đơn để nói về thói quen, lịch trình hoặc sự thật. Với he/she/it, động từ thường thêm -s hoặc -es.',formula:'S + V(s/es) · S + do/does not + V',example:'She goes to school every day. (Cô ấy đi học mỗi ngày.)',extra:'I play football on Sundays. / He does not like milk.'},
+{cat:'grammar',tag:'NGỮ PHÁP',title:'There is / There are',desc:'Diễn tả có một hay nhiều người, vật ở đâu đó.',summary:'There is đi với danh từ số ít hoặc không đếm được; there are đi với danh từ số nhiều.',formula:'There is + danh từ số ít · There are + danh từ số nhiều',example:'There is a book on the desk. / There are two pens in my bag.',extra:'Câu hỏi: Is there…? / Are there…?'},
+{cat:'vocab',tag:'TỪ VỰNG',title:'School things',desc:'Từ vựng về đồ dùng học tập.',summary:'Một số từ thường gặp: notebook (vở), pencil (bút chì), ruler (thước), eraser (cục tẩy), calculator (máy tính).',formula:'Danh từ + a/an hoặc số lượng phù hợp',example:'I have a new notebook and two pencils.',extra:'Hãy thử gọi tên 5 đồ vật quanh bàn học bằng tiếng Anh.'},
+{cat:'grammar',tag:'NGỮ PHÁP',title:'Can / can’t',desc:'Nói về khả năng hoặc điều được phép.',summary:'Can diễn tả khả năng hoặc sự cho phép. Sau can/can’t, dùng động từ nguyên mẫu.',formula:'S + can/can’t + V nguyên mẫu',example:'I can swim, but I can’t dive.',extra:'Câu hỏi: Can you swim? — Yes, I can. / No, I can’t.'},
+{cat:'skills',tag:'KỸ NĂNG',title:'Giới thiệu bản thân',desc:'Tập nói tên, tuổi, sở thích và nơi sống.',summary:'Một bài giới thiệu ngắn có thể gồm tên, tuổi, lớp, sở thích và một điều bạn thích.',formula:'My name is… / I am … years old. / I like…',example:'Hi! My name is Linh. I am twelve years old. I like reading.',extra:'Thử thay thông tin trong ví dụ bằng thông tin của bạn.'},
+{cat:'vocab',tag:'TỪ VỰNG',title:'Daily routines',desc:'Các hoạt động thường ngày.',summary:'get up (thức dậy), have breakfast (ăn sáng), go to school (đi học), do homework (làm bài tập), go to bed (đi ngủ).',formula:'I + động từ + thời gian',example:'I get up at six o’clock and do my homework in the evening.',extra:'Hãy viết 3 câu kể về một ngày của bạn.'}
+],
+7:[
+{cat:'grammar',tag:'NGỮ PHÁP',title:'Past simple',desc:'Kể về sự việc đã xảy ra và kết thúc trong quá khứ.',summary:'Động từ có quy tắc thường thêm -ed; động từ bất quy tắc dùng dạng quá khứ riêng. Phủ định và câu hỏi dùng did.',formula:'S + V2/ed · S + did not + V · Did + S + V?',example:'We visited our grandparents yesterday.',extra:'She went to the library last week. (go → went)'},
+{cat:'grammar',tag:'NGỮ PHÁP',title:'Comparative adjectives',desc:'So sánh hơn giữa hai người hoặc sự vật.',summary:'Tính từ ngắn thường thêm -er; tính từ dài thường dùng more. Có một số dạng bất quy tắc.',formula:'adj-er + than · more + adj + than',example:'This book is cheaper than that one.',extra:'English is more interesting than I expected.'},
+{cat:'vocab',tag:'TỪ VỰNG',title:'Hobbies',desc:'Nói về sở thích và thời gian rảnh.',summary:'reading (đọc sách), cycling (đạp xe), collecting stamps (sưu tầm tem), gardening (làm vườn), cooking (nấu ăn).',formula:'enjoy / like / love + V-ing',example:'I enjoy listening to music in my free time.',extra:'Sau enjoy, động từ theo sau thường ở dạng V-ing.'},
+{cat:'grammar',tag:'NGỮ PHÁP',title:'Some / any',desc:'Lượng từ dùng với danh từ số nhiều và không đếm được.',summary:'Some thường dùng trong câu khẳng định; any thường gặp trong câu phủ định và nghi vấn. Có ngoại lệ tùy ngữ cảnh.',formula:'some + danh từ · any + danh từ',example:'There are some apples. Are there any oranges?',extra:'Would you like some tea? — some cũng dùng trong lời mời.'},
+{cat:'skills',tag:'KỸ NĂNG',title:'Viết đoạn văn ngắn',desc:'Sắp xếp ý để viết đoạn văn rõ ràng.',summary:'Mở đầu nêu chủ đề, phần thân giải thích bằng 2–3 ý, kết thúc bằng cảm nghĩ hoặc câu tổng kết.',formula:'Topic sentence → Supporting ideas → Closing sentence',example:'My favourite hobby is cycling. It keeps me active. I often cycle with my friends.',extra:'Dùng từ nối như first, also, because và finally.'},
+{cat:'vocab',tag:'TỪ VỰNG',title:'Food and drink',desc:'Từ vựng về thức ăn và đồ uống.',summary:'vegetables (rau), fruit (trái cây), rice (cơm/gạo), noodles (mì), juice (nước ép), water (nước).',formula:'Would you like…? / I’d like…',example:'I’d like a glass of orange juice, please.',extra:'Chú ý danh từ đếm được và không đếm được.'}
+],
+8:[
+{cat:'grammar',tag:'NGỮ PHÁP',title:'Present continuous',desc:'Diễn tả hành động đang diễn ra quanh thời điểm nói.',summary:'Dùng am/is/are + V-ing. Thường đi với now, at the moment hoặc ngữ cảnh hành động đang diễn ra.',formula:'S + am/is/are + V-ing',example:'They are studying English at the moment.',extra:'He isn’t sleeping. / Are you listening?'},
+{cat:'grammar',tag:'NGỮ PHÁP',title:'First conditional',desc:'Nói về điều có thể xảy ra trong tương lai.',summary:'Mệnh đề if dùng hiện tại đơn; mệnh đề chính dùng will + động từ nguyên mẫu.',formula:'If + present simple, S + will + V',example:'If it rains, we will stay at home.',extra:'Không dùng will ngay sau if trong cấu trúc cơ bản này.'},
+{cat:'vocab',tag:'TỪ VỰNG',title:'Environmental problems',desc:'Từ vựng về môi trường và cách bảo vệ thiên nhiên.',summary:'pollution (ô nhiễm), rubbish (rác), recycle (tái chế), protect (bảo vệ), save energy (tiết kiệm năng lượng).',formula:'should / shouldn’t + V',example:'We should recycle paper and save water.',extra:'Thử nêu 3 việc bạn có thể làm để bảo vệ môi trường.'},
+{cat:'grammar',tag:'NGỮ PHÁP',title:'Reported speech basics',desc:'Thuật lại lời nói của người khác.',summary:'Trong câu tường thuật cơ bản, đại từ và thì có thể thay đổi theo ngữ cảnh và động từ tường thuật.',formula:'S + said (that) + mệnh đề',example:'“I am tired,” she said. → She said (that) she was tired.',extra:'Cần chú ý thời gian, đại từ và hoàn cảnh khi chuyển câu.'},
+{cat:'skills',tag:'KỸ NĂNG',title:'Đọc hiểu hiệu quả',desc:'Tìm ý chính và thông tin cụ thể trong bài đọc.',summary:'Đọc tiêu đề trước, lướt nhanh để nắm ý chính, sau đó tìm từ khóa trong câu hỏi để định vị thông tin.',formula:'Skim for the main idea · Scan for details',example:'Gạch chân tên riêng, con số, mốc thời gian và từ khóa.',extra:'Không cần dịch từng từ mới hiểu được nội dung chung.'},
+{cat:'vocab',tag:'TỪ VỰNG',title:'Technology',desc:'Từ vựng về công nghệ và thiết bị.',summary:'device (thiết bị), screen (màn hình), online (trực tuyến), download (tải xuống), application (ứng dụng).',formula:'I use … to …',example:'I use a learning app to practise English.',extra:'Nhớ sử dụng công nghệ an toàn và có trách nhiệm.'}
+],
+9:[
+{cat:'grammar',tag:'NGỮ PHÁP',title:'Present perfect',desc:'Nói về trải nghiệm hoặc việc liên quan đến hiện tại.',summary:'Dùng have/has + V3. Thường gặp với ever, never, already, yet và since/for tùy ý nghĩa.',formula:'S + have/has + V3/ed',example:'I have learned English for four years.',extra:'Have you ever visited Hue? — Yes, I have.'},
+{cat:'grammar',tag:'NGỮ PHÁP',title:'Past continuous',desc:'Diễn tả hành động đang diễn ra tại một thời điểm trong quá khứ.',summary:'Dùng was/were + V-ing. Có thể kết hợp với quá khứ đơn để nói hành động đang diễn ra thì sự việc khác xen vào.',formula:'S + was/were + V-ing',example:'I was doing homework when my friend called.',extra:'While I was walking home, it started to rain.'},
+{cat:'grammar',tag:'NGỮ PHÁP',title:'Second conditional',desc:'Giả định không có thật hoặc khó xảy ra ở hiện tại.',summary:'Mệnh đề if dùng quá khứ đơn; mệnh đề chính dùng would + động từ nguyên mẫu.',formula:'If + past simple, S + would + V',example:'If I had more time, I would learn another language.',extra:'Trong văn phong chuẩn, thường dùng were trong “If I were you…”'},
+{cat:'vocab',tag:'TỪ VỰNG',title:'Word forms',desc:'Nhận biết danh từ, động từ, tính từ và trạng từ.',summary:'beauty (N) → beautiful (Adj) → beautifully (Adv); develop (V) → development (N). Hậu tố giúp nhận diện từ loại nhưng có ngoại lệ.',formula:'Noun · Verb · Adjective · Adverb',example:'She speaks English fluently. (fluently là trạng từ)',extra:'Xác định vị trí chỗ trống trong câu trước khi chọn dạng từ.'},
+{cat:'skills',tag:'KỸ NĂNG',title:'Viết đoạn nghị luận ngắn',desc:'Nêu quan điểm, lý do và ví dụ thuyết phục.',summary:'Nêu ý kiến rõ ràng, giải thích lý do, đưa ví dụ cụ thể rồi kết luận. Dùng từ nối để mạch văn dễ theo dõi.',formula:'Opinion → Reason → Example → Conclusion',example:'I believe reading is useful because it builds vocabulary. For example, stories expose us to new expressions.',extra:'Tránh lặp từ; kiểm tra thì, chia động từ và dấu câu.'},
+{cat:'grammar',tag:'NGỮ PHÁP',title:'Relative clauses',desc:'Dùng mệnh đề quan hệ để bổ sung thông tin.',summary:'Who thường chỉ người, which chỉ vật, that có thể thay who/which trong nhiều mệnh đề xác định.',formula:'person + who… · thing + which/that…',example:'The girl who sits next to me is very helpful.',extra:'Chọn đại từ quan hệ dựa vào danh từ đứng trước.'}
+]};
+const quiz=[
+{q:'Choose the correct answer: She ___ to school every day.',a:['go','goes','going','went'],c:1,e:'Với chủ ngữ she ở hiện tại đơn, động từ go đổi thành goes.'},
+{q:'Yesterday, we ___ a film.',a:['watch','watches','watched','watching'],c:2,e:'Yesterday chỉ thời gian quá khứ; watch là động từ có quy tắc nên thêm -ed.'},
+{q:'If it rains, we ___ at home.',a:['stay','stayed','will stay','would stayed'],c:2,e:'Câu điều kiện loại 1: If + hiện tại đơn, will + động từ nguyên mẫu.'},
+{q:'I have lived here ___ 2022.',a:['for','since','during','from'],c:1,e:'Since đi với mốc thời gian bắt đầu; for đi với khoảng thời gian.'},
+{q:'My brother is ___ than me.',a:['tall','taller','tallest','more tall'],c:1,e:'So sánh hơn với tính từ ngắn tall: taller + than.'},
+{q:'You ___ eat more vegetables. It is good for you.',a:['should','shouldn’t','mustn’t','can’t'],c:0,e:'Should dùng để đưa ra lời khuyên.'},
+{q:'She enjoys ___ books in her free time.',a:['read','reads','reading','to reading'],c:2,e:'Sau enjoy, dùng động từ ở dạng V-ing: enjoy reading.'},
+{q:'Choose the correct word form: She sings very ___.',a:['beautiful','beauty','beautifully','beautify'],c:2,e:'Cần trạng từ beautifully để bổ nghĩa cho động từ sings.'}
+];
+const vocab=[['Improve','/ɪmˈpruːv/ · động từ','cải thiện, tiến bộ','I want to improve my English. — Tôi muốn cải thiện tiếng Anh của mình.'],['Curious','/ˈkjʊəriəs/ · tính từ','tò mò, ham tìm hiểu','I am curious about different cultures. — Tôi tò mò về các nền văn hóa khác nhau.'],['Environment','/ɪnˈvaɪrənmənt/ · danh từ','môi trường','We should protect the environment. — Chúng ta nên bảo vệ môi trường.'],['Confident','/ˈkɒnfɪdənt/ · tính từ','tự tin','Practising helps me feel more confident. — Luyện tập giúp tôi tự tin hơn.'],['Achieve','/əˈtʃiːv/ · động từ','đạt được','You can achieve your goals with practice. — Bạn có thể đạt mục tiêu nhờ luyện tập.']];
+let selectedGrade=6, category='all', query='', qi=0, score=0, answered=false, vi=0;
+const $=id=>document.getElementById(id);
+function renderLessons(){ $('lessonHeading').textContent=`Bài học lớp ${selectedGrade}`;const items=lessons[selectedGrade].filter(x=>(category==='all'||x.cat===category)&&(x.title+' '+x.desc+' '+x.tag).toLowerCase().includes(query.toLowerCase()));$('lessonGrid').innerHTML=items.length?items.map((x,i)=>`<article class="lesson"><span class="tag">${x.tag}</span><h3>${x.title}</h3><p>${x.desc}</p><button data-index="${lessons[selectedGrade].indexOf(x)}">Học chủ đề này →</button></article>`).join(''):'<div class="empty">Không tìm thấy bài học phù hợp. Thử từ khóa khác nhé.</div>';document.querySelectorAll('#lessonGrid button').forEach(b=>b.addEventListener('click',()=>openLesson(lessons[selectedGrade][+b.dataset.index])));}
+function openLesson(x){$('modalTag').textContent=x.tag;$('modalTitle').textContent=x.title;$('modalBody').innerHTML=`<p>${x.summary}</p><div class="modal-example"><b>Cấu trúc cần nhớ</b>${x.formula}</div><div class="modal-example"><b>Ví dụ</b>${x.example}</div><p>${x.extra}</p>`;$('modalBackdrop').classList.add('show');$('closeModal').focus();}
+document.querySelectorAll('.grade').forEach(b=>b.addEventListener('click',()=>{selectedGrade=+b.dataset.grade;document.querySelectorAll('.grade').forEach(x=>x.classList.toggle('active',x===b));renderLessons();$('lessons').scrollIntoView({behavior:'smooth',block:'start'});}));
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{category=b.dataset.category;document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));renderLessons();}));
+$('searchInput').addEventListener('input',e=>{query=e.target.value;renderLessons();});
+$('closeModal').addEventListener('click',()=>$('modalBackdrop').classList.remove('show'));$('modalBackdrop').addEventListener('click',e=>{if(e.target===$('modalBackdrop'))$('modalBackdrop').classList.remove('show')});document.addEventListener('keydown',e=>{if(e.key==='Escape')$('modalBackdrop').classList.remove('show')});
+function renderQuiz() {const q=quiz[qi%quiz.length];answered=false;$('question').textContent=q.q;$('answers').innerHTML=q.a.map((a,i)=>`<button class="answer" data-answer="${i}">${String.fromCharCode(65+i)}. ${a}</button>`).join('');$('feedback').textContent='Chọn một đáp án để xem kết quả.';$('qCounter').textContent=`Câu ${qi+1}`;document.querySelectorAll('.answer').forEach(b=>b.addEventListener('click',()=>{if(answered)return;answered=true;const ok=+b.dataset.answer===q.c;if(ok){score++;$('score').textContent=score;}document.querySelectorAll('.answer').forEach((el,i)=>{el.disabled=true;if(i===q.c)el.classList.add('correct');else if(i===+b.dataset.answer&&!ok)el.classList.add('wrong')});$('feedback').textContent=(ok?'Chính xác! ':'Chưa đúng nhé. ')+q.e;}));}
+$('nextQuestion').addEventListener('click',()=>{qi++;renderQuiz()});
+function renderWord(){const w=vocab[vi%vocab.length];$('vocabWord').textContent=w[0];$('vocabPron').textContent=w[1];$('vocabMeaning').textContent=w[2];$('vocabExample').textContent=w[3]}
+$('nextWord').addEventListener('click',()=>{vi++;renderWord()});
+$('menuBtn').addEventListener('click',()=>$('navlinks').classList.toggle('open'));document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>$('navlinks').classList.remove('open')));
+renderLessons();renderQuiz();renderWord();
+</script>
+</body>
+</html>
