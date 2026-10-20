@@ -19,6 +19,14 @@ section{padding:30px 0 42px}.section-head{display:flex;justify-content:space-bet
 .practice-layout{display:grid;grid-template-columns:1fr .8fr;gap:18px}.panel{background:white;border:1px solid var(--line);border-radius:18px;padding:23px}.panel h3{margin:0 0 7px}.panel .muted{color:var(--muted);font-size:.92rem;margin-top:0}.question{font-size:1.12rem;font-weight:750;margin:20px 0 14px}.answers{display:grid;gap:9px}.answer{padding:12px 14px;border:1px solid var(--line);border-radius:11px;background:white;text-align:left;cursor:pointer}.answer:hover{border-color:var(--blue)}.answer.correct{border-color:#1a9a71;background:#eaf8f2}.answer.wrong{border-color:#d9485f;background:#fff0f1}.feedback{min-height:26px;margin:12px 0;color:var(--muted);font-size:.9rem}.quiz-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px}.scorebox{background:#f7f8fc;border-radius:14px;padding:16px;margin-top:15px}.scorebox b{font-size:1.5rem}.word{font-size:1.5rem;font-weight:850;margin:15px 0 4px}.pron{color:var(--muted);font-size:.88rem}.word-meaning{padding:13px;background:#f7f8fc;border-radius:12px;margin:15px 0}.word-meaning b{display:block;margin-bottom:4px}.tip{background:#fff8e7;border:1px solid #f4e4b8;border-radius:14px;padding:15px;color:#775b13;font-size:.9rem;margin-top:14px}
 footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:.88rem}.footer-row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.empty{padding:28px;text-align:center;color:var(--muted);background:white;border:1px dashed var(--line);border-radius:14px;grid-column:1/-1}
 .modal-backdrop{position:fixed;inset:0;background:#11182788;z-index:10;display:none;align-items:center;justify-content:center;padding:18px}.modal-backdrop.show{display:flex}.modal{width:min(560px,100%);max-height:85vh;overflow:auto;background:white;border-radius:20px;padding:25px;box-shadow:0 20px 60px #0003}.modal-top{display:flex;justify-content:space-between;gap:14px;align-items:start}.close{border:0;background:#f1f3f8;border-radius:10px;width:36px;height:36px;cursor:pointer;font-size:1.2rem}.modal h2{margin:12px 0 8px}.modal p{color:var(--muted)}.modal-example{background:#f7f8fc;border-radius:12px;padding:14px;margin:14px 0}.modal-example b{display:block;margin-bottom:5px}
+body[data-theme="dark"]{--bg:#101522;--card:#192131;--ink:#edf2fb;--muted:#aab6ca;--line:#303b50;--blue-soft:#25345b;--shadow:0 8px 30px rgba(0,0,0,.18)}
+body[data-theme="dark"] header{background:rgba(20,27,41,.94)}
+body[data-theme="dark"] .secondary,body[data-theme="dark"] .search input,body[data-theme="dark"] .tab,body[data-theme="dark"] .answer,body[data-theme="dark"] .menu{background:var(--card);color:var(--ink);border-color:var(--line)}
+body[data-theme="dark"] .lesson,body[data-theme="dark"] .panel,body[data-theme="dark"] .grade,body[data-theme="dark"] .empty,body[data-theme="dark"] .modal{background:var(--card);color:var(--ink);border-color:var(--line)}
+body[data-theme="dark"] .scorebox,body[data-theme="dark"] .word-meaning,body[data-theme="dark"] .modal-example{background:#222d40}
+.auth-form{display:grid;gap:8px}.auth-form label{font-weight:700;font-size:.92rem;margin-top:5px}.auth-form input{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink)}.auth-form input:focus{outline:2px solid #4263eb55;border-color:var(--blue)}.text-button{justify-self:start;border:0;background:none;color:var(--blue);font-weight:700;cursor:pointer;padding:4px 0}.small-note{font-size:.8rem;color:var(--muted);margin-top:16px}.progress-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.grade-progress{display:grid;gap:10px;margin-top:12px}.grade-progress-row{border:1px solid var(--line);border-radius:12px;padding:12px}.grade-progress-head{display:flex;justify-content:space-between;gap:8px;font-size:.9rem}.progress-track{height:8px;border-radius:999px;background:var(--line);overflow:hidden;margin-top:8px}.progress-fill{height:100%;background:var(--blue);border-radius:999px}.small-note{line-height:1.45}#signedInActions{margin-top:12px}
+body[data-theme="dark"] .answer.correct{background:#153b34}body[data-theme="dark"] .answer.wrong{background:#44252f}
+body[data-theme="dark"] .navlinks.open{background:var(--card)}body[data-theme="dark"] .close{background:#293448;color:var(--ink)}
 @media(max-width:780px){.hero-grid{grid-template-columns:1fr}.hero{padding-top:38px}.hero-card{max-width:520px}.grade-grid{grid-template-columns:repeat(2,1fr)}.lesson-grid{grid-template-columns:repeat(2,1fr)}.practice-layout{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.search{width:100%}.navlinks{gap:12px}}
 @media(max-width:480px){.nav{height:62px}.navlinks{display:none}.menu{display:block;border:1px solid var(--line);background:white;border-radius:10px;padding:8px 10px}.navlinks.open{display:flex;position:absolute;top:62px;left:0;right:0;background:white;border-bottom:1px solid var(--line);padding:16px 4%;flex-direction:column}.hero h1{letter-spacing:-1.2px}.grade-grid,.lesson-grid{grid-template-columns:1fr}.grade{display:grid;grid-template-columns:45px 1fr;column-gap:12px;align-items:center}.grade-icon{grid-row:span 2}.grade h3{margin:0}.grade p{margin:3px 0}.grade .count{grid-column:2;margin-top:6px}}
 </style>
@@ -27,8 +35,8 @@ footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-s
 <header>
   <div class="wrap nav">
     <a class="brand" href="#home" aria-label="English Hub trang chủ"><span class="logo">E</span> English Hub</a>
-    <nav class="navlinks" id="navlinks"><a href="#grades">Chọn lớp</a><a href="#lessons">Bài học</a><a href="#practice">Luyện tập</a><a href="#vocab">Từ vựng</a></nav>
-    <button class="menu" id="menuBtn" aria-label="Mở menu">☰</button>
+    <nav class="navlinks" id="navlinks"><a href="#grades">Chọn lớp</a><a href="#lessons">Bài học</a><a href="#practice">Luyện tập</a><a href="#vocab">Từ vựng</a><a href="#account">Tài khoản</a></nav>
+    <button class="btn secondary" id="themeToggle" aria-label="Đổi giao diện" title="Đổi giao diện">🌙 Tối</button><button class="menu" id="menuBtn" aria-label="Mở menu">☰</button>
   </div>
 </header>
 <main>
@@ -65,7 +73,7 @@ footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-s
     <div class="section-head"><div><h2>Luyện tập nhanh</h2><p>Thử sức với câu hỏi trắc nghiệm và xem giải thích ngay.</p></div></div>
     <div class="practice-layout">
       <div class="panel">
-        <h3>🧠 Kiểm tra kiến thức</h3><p class="muted">Câu hỏi ngẫu nhiên ở mức cơ bản.</p>
+        <h3>🧠 Kiểm tra kiến thức</h3><p class="muted">Chọn khối lớp để luyện tập đúng trình độ.</p><label for="quizGrade"><b>Kiến thức lớp:</b></label> <select id="quizGrade" style="margin:8px 0 4px;padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink)"><option value="6">Lớp 6</option><option value="7">Lớp 7</option><option value="8">Lớp 8</option><option value="9">Lớp 9</option></select>
         <div class="question" id="question">Choose the correct answer: She ___ to school every day.</div>
         <div class="answers" id="answers"></div><div class="feedback" id="feedback" aria-live="polite">Chọn một đáp án để xem kết quả.</div>
         <div class="quiz-bottom"><span class="muted" id="qCounter">Câu 1</span><button class="btn primary" id="nextQuestion">Câu tiếp theo →</button></div>
@@ -77,6 +85,30 @@ footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-s
       </div>
     </div>
   </div></section>
+  <section id="account"><div class="wrap">
+    <div class="section-head"><div><h2>Tài khoản & tiến độ</h2><p>Tạo tài khoản để đồng bộ kết quả học tập trên các thiết bị.</p></div></div>
+    <div class="practice-layout">
+      <div class="panel" id="authPanel">
+        <h3 id="authHeading">👋 Chào mừng đến English Hub</h3>
+        <p class="muted" id="authStatus">Đăng ký hoặc đăng nhập để lưu điểm và tiến độ của bạn trên đám mây.</p>
+        <form id="authForm" class="auth-form">
+          <label id="nameLabel" for="displayName">Tên hiển thị</label><input id="displayName" autocomplete="name" maxlength="40" placeholder="Ví dụ: Minh Anh">
+          <label for="authEmail">Email</label><input id="authEmail" type="email" required autocomplete="email" placeholder="ban@example.com">
+          <label for="authPassword">Mật khẩu</label><input id="authPassword" type="password" required minlength="6" autocomplete="current-password" placeholder="Ít nhất 6 ký tự">
+          <div class="actions"><button class="btn primary" id="authSubmit" type="submit">Tạo tài khoản</button><button class="btn secondary" id="authModeToggle" type="button">Đã có tài khoản? Đăng nhập</button></div>
+          <button class="text-button" id="forgotPassword" type="button">Quên mật khẩu?</button>
+        </form>
+        <div id="authMessage" class="feedback" aria-live="polite"></div>
+        <div id="signedInActions" hidden><button class="btn secondary" id="signOutBtn" type="button">Đăng xuất</button></div>
+        <p class="small-note">Chỉ nhập email của bạn. Không dùng mật khẩu của tài khoản khác. Tài khoản được xử lý bởi Firebase; English Hub không lưu mật khẩu trong tệp website.</p>
+      </div>
+      <div class="panel">
+        <h3>📊 Tiến độ của bạn</h3><p class="muted" id="progressIntro">Đăng nhập để xem thống kê được đồng bộ giữa các thiết bị.</p>
+        <div class="progress-grid"><div class="scorebox"><span class="muted">Tổng câu đã làm</span><br><b id="totalAnswered">—</b></div><div class="scorebox"><span class="muted">Tổng câu đúng</span><br><b id="totalCorrect">—</b></div></div>
+        <div id="gradeProgress" class="grade-progress"><p class="muted">Tiến độ từng lớp sẽ xuất hiện ở đây.</p></div>
+      </div>
+    </div>
+  </div></section>
   <section id="vocab"><div class="wrap">
     <div class="section-head"><div><h2>Từ vựng mỗi ngày</h2><p>Một vài từ phổ biến để bắt đầu luyện ghi nhớ.</p></div></div>
     <div class="practice-layout">
@@ -85,7 +117,7 @@ footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-s
     </div>
   </div></section>
 </main>
-<footer><div class="wrap footer-row"><span><b>English Hub</b> · Cùng bạn học tốt tiếng Anh.</span><span>Miễn phí sử dụng · Không cần tài khoản</span></div></footer>
+<footer><div class="wrap footer-row"><span><b>English Hub</b> · Cùng bạn học tốt tiếng Anh.</span><span>Miễn phí sử dụng · Tài khoản tùy chọn</span></div></footer>
 <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div class="modal-top"><div><span class="eyebrow" id="modalTag">NGỮ PHÁP</span></div><button class="close" id="closeModal" aria-label="Đóng">×</button></div><h2 id="modalTitle"></h2><div id="modalBody"></div></div></div>
 <script>
 const lessons = {
@@ -121,18 +153,38 @@ const lessons = {
 {cat:'skills',tag:'KỸ NĂNG',title:'Viết đoạn nghị luận ngắn',desc:'Nêu quan điểm, lý do và ví dụ thuyết phục.',summary:'Nêu ý kiến rõ ràng, giải thích lý do, đưa ví dụ cụ thể rồi kết luận. Dùng từ nối để mạch văn dễ theo dõi.',formula:'Opinion → Reason → Example → Conclusion',example:'I believe reading is useful because it builds vocabulary. For example, stories expose us to new expressions.',extra:'Tránh lặp từ; kiểm tra thì, chia động từ và dấu câu.'},
 {cat:'grammar',tag:'NGỮ PHÁP',title:'Relative clauses',desc:'Dùng mệnh đề quan hệ để bổ sung thông tin.',summary:'Who thường chỉ người, which chỉ vật, that có thể thay who/which trong nhiều mệnh đề xác định.',formula:'person + who… · thing + which/that…',example:'The girl who sits next to me is very helpful.',extra:'Chọn đại từ quan hệ dựa vào danh từ đứng trước.'}
 ]};
-const quiz=[
-{q:'Choose the correct answer: She ___ to school every day.',a:['go','goes','going','went'],c:1,e:'Với chủ ngữ she ở hiện tại đơn, động từ go đổi thành goes.'},
-{q:'Yesterday, we ___ a film.',a:['watch','watches','watched','watching'],c:2,e:'Yesterday chỉ thời gian quá khứ; watch là động từ có quy tắc nên thêm -ed.'},
-{q:'If it rains, we ___ at home.',a:['stay','stayed','will stay','would stayed'],c:2,e:'Câu điều kiện loại 1: If + hiện tại đơn, will + động từ nguyên mẫu.'},
-{q:'I have lived here ___ 2022.',a:['for','since','during','from'],c:1,e:'Since đi với mốc thời gian bắt đầu; for đi với khoảng thời gian.'},
-{q:'My brother is ___ than me.',a:['tall','taller','tallest','more tall'],c:1,e:'So sánh hơn với tính từ ngắn tall: taller + than.'},
-{q:'You ___ eat more vegetables. It is good for you.',a:['should','shouldn’t','mustn’t','can’t'],c:0,e:'Should dùng để đưa ra lời khuyên.'},
-{q:'She enjoys ___ books in her free time.',a:['read','reads','reading','to reading'],c:2,e:'Sau enjoy, dùng động từ ở dạng V-ing: enjoy reading.'},
-{q:'Choose the correct word form: She sings very ___.',a:['beautiful','beauty','beautifully','beautify'],c:2,e:'Cần trạng từ beautifully để bổ nghĩa cho động từ sings.'}
-];
+const quiz={
+6:[
+{q:'She ___ to school every day.',a:['go','goes','going','went'],c:1,e:'Hiện tại đơn: với she/he/it, động từ thường thêm -s/-es.'},
+{q:'There ___ two books on the table.',a:['is','are','am','be'],c:1,e:'Dùng are với danh từ số nhiều: two books.'},
+{q:'I ___ a student.',a:['am','is','are','be'],c:0,e:'Với chủ ngữ I, động từ to be là am.'},
+{q:'What is the plural of “child”?',a:['childs','childes','children','childrens'],c:2,e:'Children là dạng số nhiều bất quy tắc của child.'},
+{q:'My birthday is ___ May.',a:['at','on','in','from'],c:2,e:'Dùng in với tháng: in May.'}
+],
+7:[
+{q:'Yesterday, we ___ football after school.',a:['play','plays','played','playing'],c:2,e:'Yesterday là dấu hiệu quá khứ đơn; play → played.'},
+{q:'She enjoys ___ to music.',a:['listen','listens','listening','to listening'],c:2,e:'Sau enjoy dùng động từ thêm -ing.'},
+{q:'This book is ___ than that one.',a:['interesting','more interesting','most interesting','the interesting'],c:1,e:'Tính từ dài dùng more để tạo so sánh hơn.'},
+{q:'You ___ eat too much candy. It is not good for your teeth.',a:['should','shouldn’t','can','are'],c:1,e:'Shouldn’t dùng để khuyên không nên làm việc gì.'},
+{q:'How ___ apples do you need?',a:['much','many','often','long'],c:1,e:'How many dùng với danh từ đếm được số nhiều.'}
+],
+8:[
+{q:'While I ___ TV, my mother was cooking.',a:['watch','watched','was watching','am watching'],c:2,e:'Quá khứ tiếp diễn: was/were + V-ing.'},
+{q:'If we work hard, we ___ the project on time.',a:['finished','will finish','would finished','finishing'],c:1,e:'Câu điều kiện loại 1: If + hiện tại đơn, will + V.'},
+{q:'He asked me where I ___.',a:['live','lived','am live','will live'],c:1,e:'Trong câu tường thuật ở quá khứ, live → lived.'},
+{q:'This bridge ___ in 2010.',a:['built','was built','is build','builds'],c:1,e:'Câu bị động quá khứ đơn: was/were + V3.'},
+{q:'She is interested ___ learning languages.',a:['on','at','in','for'],c:2,e:'Cụm đúng là interested in + danh từ/V-ing.'}
+],
+9:[
+{q:'I have lived here ___ 2020.',a:['for','since','during','by'],c:1,e:'Since đi với mốc thời gian; for đi với khoảng thời gian.'},
+{q:'If I ___ you, I would talk to the teacher.',a:['am','was','were','will be'],c:2,e:'Câu điều kiện loại 2 thường dùng If I were you.'},
+{q:'She sings very ___.',a:['beautiful','beauty','beautifully','beautify'],c:2,e:'Cần trạng từ beautifully bổ nghĩa cho sings.'},
+{q:'The book ___ I borrowed was very useful.',a:['who','where','which','when'],c:2,e:'Which dùng để thay thế cho vật trong mệnh đề quan hệ.'},
+{q:'English ___ in many countries.',a:['speaks','is spoken','spoke','speaking'],c:1,e:'Câu bị động hiện tại đơn: am/is/are + V3.'}
+]
+};
 const vocab=[['Improve','/ɪmˈpruːv/ · động từ','cải thiện, tiến bộ','I want to improve my English. — Tôi muốn cải thiện tiếng Anh của mình.'],['Curious','/ˈkjʊəriəs/ · tính từ','tò mò, ham tìm hiểu','I am curious about different cultures. — Tôi tò mò về các nền văn hóa khác nhau.'],['Environment','/ɪnˈvaɪrənmənt/ · danh từ','môi trường','We should protect the environment. — Chúng ta nên bảo vệ môi trường.'],['Confident','/ˈkɒnfɪdənt/ · tính từ','tự tin','Practising helps me feel more confident. — Luyện tập giúp tôi tự tin hơn.'],['Achieve','/əˈtʃiːv/ · động từ','đạt được','You can achieve your goals with practice. — Bạn có thể đạt mục tiêu nhờ luyện tập.']];
-let selectedGrade=6, category='all', query='', qi=0, score=0, answered=false, vi=0;
+let selectedGrade=6, category='all', query='', quizGrade=6, qi=0, score=0, answered=false, vi=0;
 const $=id=>document.getElementById(id);
 function renderLessons(){ $('lessonHeading').textContent=`Bài học lớp ${selectedGrade}`;const items=lessons[selectedGrade].filter(x=>(category==='all'||x.cat===category)&&(x.title+' '+x.desc+' '+x.tag).toLowerCase().includes(query.toLowerCase()));$('lessonGrid').innerHTML=items.length?items.map((x,i)=>`<article class="lesson"><span class="tag">${x.tag}</span><h3>${x.title}</h3><p>${x.desc}</p><button data-index="${lessons[selectedGrade].indexOf(x)}">Học chủ đề này →</button></article>`).join(''):'<div class="empty">Không tìm thấy bài học phù hợp. Thử từ khóa khác nhé.</div>';document.querySelectorAll('#lessonGrid button').forEach(b=>b.addEventListener('click',()=>openLesson(lessons[selectedGrade][+b.dataset.index])));}
 function openLesson(x){$('modalTag').textContent=x.tag;$('modalTitle').textContent=x.title;$('modalBody').innerHTML=`<p>${x.summary}</p><div class="modal-example"><b>Cấu trúc cần nhớ</b>${x.formula}</div><div class="modal-example"><b>Ví dụ</b>${x.example}</div><p>${x.extra}</p>`;$('modalBackdrop').classList.add('show');$('closeModal').focus();}
@@ -140,12 +192,77 @@ document.querySelectorAll('.grade').forEach(b=>b.addEventListener('click',()=>{s
 document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{category=b.dataset.category;document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));renderLessons();}));
 $('searchInput').addEventListener('input',e=>{query=e.target.value;renderLessons();});
 $('closeModal').addEventListener('click',()=>$('modalBackdrop').classList.remove('show'));$('modalBackdrop').addEventListener('click',e=>{if(e.target===$('modalBackdrop'))$('modalBackdrop').classList.remove('show')});document.addEventListener('keydown',e=>{if(e.key==='Escape')$('modalBackdrop').classList.remove('show')});
-function renderQuiz() {const q=quiz[qi%quiz.length];answered=false;$('question').textContent=q.q;$('answers').innerHTML=q.a.map((a,i)=>`<button class="answer" data-answer="${i}">${String.fromCharCode(65+i)}. ${a}</button>`).join('');$('feedback').textContent='Chọn một đáp án để xem kết quả.';$('qCounter').textContent=`Câu ${qi+1}`;document.querySelectorAll('.answer').forEach(b=>b.addEventListener('click',()=>{if(answered)return;answered=true;const ok=+b.dataset.answer===q.c;if(ok){score++;$('score').textContent=score;}document.querySelectorAll('.answer').forEach((el,i)=>{el.disabled=true;if(i===q.c)el.classList.add('correct');else if(i===+b.dataset.answer&&!ok)el.classList.add('wrong')});$('feedback').textContent=(ok?'Chính xác! ':'Chưa đúng nhé. ')+q.e;}));}
+function renderQuiz() {const pool=quiz[quizGrade];const q=pool[qi%pool.length];answered=false;$('question').textContent=q.q;$('answers').innerHTML=q.a.map((a,i)=>`<button class="answer" data-answer="${i}">${String.fromCharCode(65+i)}. ${a}</button>`).join('');$('feedback').textContent='Chọn một đáp án để xem kết quả.';$('qCounter').textContent=`Câu ${qi+1}`;document.querySelectorAll('.answer').forEach(b=>b.addEventListener('click',()=>{if(answered)return;answered=true;const ok=+b.dataset.answer===q.c;if(ok){score++;$('score').textContent=score;}document.querySelectorAll('.answer').forEach((el,i)=>{el.disabled=true;if(i===q.c)el.classList.add('correct');else if(i===+b.dataset.answer&&!ok)el.classList.add('wrong')});$('feedback').textContent=(ok?'Chính xác! ':'Chưa đúng nhé. ')+q.e;window.dispatchEvent(new CustomEvent('englishhub:quiz-answer',{detail:{grade:quizGrade,correct:ok,score:score,question:qi+1}}));}));}
 $('nextQuestion').addEventListener('click',()=>{qi++;renderQuiz()});
+$('quizGrade').addEventListener('change',e=>{quizGrade=+e.target.value;qi=0;score=0;$('score').textContent=score;renderQuiz()});
+const themeButton=$('themeToggle');function setTheme(theme){document.body.dataset.theme=theme;themeButton.textContent=theme==='dark'?'☀️ Sáng':'🌙 Tối';themeButton.setAttribute('aria-pressed',theme==='dark'?'true':'false');try{localStorage.setItem('englishHubTheme',theme)}catch(e){}}themeButton.addEventListener('click',()=>setTheme(document.body.dataset.theme==='dark'?'light':'dark'));let savedTheme='light';try{savedTheme=localStorage.getItem('englishHubTheme')||'light'}catch(e){}setTheme(savedTheme);
 function renderWord(){const w=vocab[vi%vocab.length];$('vocabWord').textContent=w[0];$('vocabPron').textContent=w[1];$('vocabMeaning').textContent=w[2];$('vocabExample').textContent=w[3]}
 $('nextWord').addEventListener('click',()=>{vi++;renderWord()});
 $('menuBtn').addEventListener('click',()=>$('navlinks').classList.toggle('open'));document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>$('navlinks').classList.remove('open')));
 renderLessons();renderQuiz();renderWord();
 </script>
+
+<script type="module">
+// SETUP: Replace the placeholder values below with your Firebase project's Web App config.
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, updateProfile, sendEmailVerification, sendPasswordResetEmail } from 'https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js';
+import { getFirestore, doc, getDoc, setDoc, updateDoc, increment, serverTimestamp } from 'https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js';
+const firebaseConfig = {
+  apiKey: "AIzaSyAidHaDhAHhLDMbORf3xzlBKKrEAG98VTc",
+  authDomain: "english-hub-34654.firebaseapp.com",
+  projectId: "english-hub-34654",
+  storageBucket: "english-hub-34654.firebasestorage.app",
+  messagingSenderId: "185466004415",
+  appId: "1:185466004415:web:370a0b047b8383e2c0370a",
+  measurementId: "G-53S3EH9JPJ"
+};
+const authForm=document.getElementById('authForm');
+const authMessage=document.getElementById('authMessage');
+const authStatus=document.getElementById('authStatus');
+const authHeading=document.getElementById('authHeading');
+const authSubmit=document.getElementById('authSubmit');
+const authModeToggle=document.getElementById('authModeToggle');
+const nameLabel=document.getElementById('nameLabel');
+const displayName=document.getElementById('displayName');
+const authEmail=document.getElementById('authEmail');
+const authPassword=document.getElementById('authPassword');
+const forgotPassword=document.getElementById('forgotPassword');
+const signedInActions=document.getElementById('signedInActions');
+const progressIntro=document.getElementById('progressIntro');
+const totalAnswered=document.getElementById('totalAnswered');
+const totalCorrect=document.getElementById('totalCorrect');
+const gradeProgress=document.getElementById('gradeProgress');
+let mode='register', app, auth, db, currentUser=null, saveQueue=Promise.resolve();
+function message(text,isError=false){authMessage.textContent=text;authMessage.style.color=isError?'#d9485f':'var(--green)';}
+function setMode(next){mode=next;const register=mode==='register';nameLabel.hidden=!register;displayName.hidden=!register;displayName.required=register;authSubmit.textContent=register?'Tạo tài khoản':'Đăng nhập';authModeToggle.textContent=register?'Đã có tài khoản? Đăng nhập':'Chưa có tài khoản? Đăng ký';authPassword.autocomplete=register?'new-password':'current-password';forgotPassword.hidden=register;message('');}
+function renderProgress(data={}){
+  const grades=data.grades||{};let answered=0,correct=0;
+  for(const g of ['6','7','8','9']){const v=grades[g]||{};answered+=Number(v.answered||0);correct+=Number(v.correct||0);}
+  totalAnswered.textContent=answered;totalCorrect.textContent=correct;
+  gradeProgress.innerHTML=['6','7','8','9'].map(g=>{const v=grades[g]||{},a=Number(v.answered||0),c=Number(v.correct||0),pct=a?Math.round(c/a*100):0;return `<div class="grade-progress-row"><div class="grade-progress-head"><strong>Lớp ${g}</strong><span>${c}/${a} câu đúng · ${pct}%</span></div><div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div></div>`}).join('');
+  progressIntro.textContent='Kết quả đã đồng bộ vào tài khoản của bạn.';
+}
+function friendlyError(err){const map={'auth/email-already-in-use':'Email này đã được đăng ký. Hãy đăng nhập.','auth/invalid-email':'Địa chỉ email chưa hợp lệ.','auth/weak-password':'Mật khẩu cần ít nhất 6 ký tự.','auth/invalid-credential':'Email hoặc mật khẩu chưa đúng.','auth/user-not-found':'Không tìm thấy tài khoản này.','auth/too-many-requests':'Có quá nhiều lần thử. Hãy chờ một lúc rồi thử lại.','auth/network-request-failed':'Không thể kết nối mạng. Hãy kiểm tra Internet.','permission-denied':'Cơ sở dữ liệu chưa được cấp quyền đúng. Hãy kiểm tra Firestore Rules.'};return map[err?.code]||('Có lỗi xảy ra: '+(err?.message||'vui lòng thử lại.'));}
+function configReady(){return firebaseConfig.apiKey!=='PASTE_YOUR_FIREBASE_API_KEY'&&firebaseConfig.projectId!=='PASTE_YOUR_PROJECT_ID';}
+if(!configReady()){authStatus.textContent='Cần kết nối Firebase trước khi tạo tài khoản thật. Hãy làm theo README đi kèm, rồi thay cấu hình mẫu trong mã nguồn.';authSubmit.disabled=true;authModeToggle.disabled=true;forgotPassword.disabled=true;message('Chưa cấu hình Firebase — website và phần học vẫn dùng được bình thường.',true);}
+else {
+ try {app=initializeApp(firebaseConfig);auth=getAuth(app);db=getFirestore(app);
+  authModeToggle.addEventListener('click',()=>setMode(mode==='register'?'login':'register'));
+  authForm.addEventListener('submit',async e=>{e.preventDefault();authSubmit.disabled=true;message('Đang xử lý…');try{
+    if(mode==='register'){
+      const cred=await createUserWithEmailAndPassword(auth,authEmail.value.trim(),authPassword.value);
+      const name=displayName.value.trim();if(name)await updateProfile(cred.user,{displayName:name});
+      await setDoc(doc(db,'users',cred.user.uid),{displayName:name,email:cred.user.email,createdAt:serverTimestamp(),grades:{'6':{answered:0,correct:0},'7':{answered:0,correct:0},'8':{answered:0,correct:0},'9':{answered:0,correct:0}}},{merge:true});
+      await sendEmailVerification(cred.user);message('Tài khoản đã tạo! Hãy kiểm tra email để xác minh.');
+    } else {await signInWithEmailAndPassword(auth,authEmail.value.trim(),authPassword.value);message('Đăng nhập thành công!');}
+  }catch(err){message(friendlyError(err),true)}finally{authSubmit.disabled=false;}});
+  forgotPassword.addEventListener('click',async()=>{if(!authEmail.value.trim()){message('Nhập email trước để nhận liên kết đặt lại mật khẩu.',true);return}try{await sendPasswordResetEmail(auth,authEmail.value.trim());message('Đã gửi liên kết đặt lại mật khẩu nếu email có tài khoản. Hãy kiểm tra hộp thư.')}catch(err){message(friendlyError(err),true)}});
+  document.getElementById('signOutBtn').addEventListener('click',async()=>{try{await signOut(auth);message('Bạn đã đăng xuất.')}catch(err){message(friendlyError(err),true)}});
+  onAuthStateChanged(auth,async user=>{currentUser=user;const signed=!!user;authForm.hidden=signed;signedInActions.hidden=!signed;authHeading.textContent=signed?'👋 Xin chào, '+(user.displayName||user.email):'👋 Chào mừng đến English Hub';authStatus.textContent=signed?(user.emailVerified?'Đã đăng nhập và xác minh email: '+user.email:'Đã đăng nhập: '+user.email+' · Hãy xác minh email để bảo vệ tài khoản.'):'Đăng ký hoặc đăng nhập để lưu điểm và tiến độ của bạn trên đám mây.';if(signed){try{const snap=await getDoc(doc(db,'users',user.uid));renderProgress(snap.exists()?snap.data():{});}catch(err){message(friendlyError(err),true)}}else{totalAnswered.textContent='—';totalCorrect.textContent='—';gradeProgress.innerHTML='<p class="muted">Đăng nhập để xem tiến độ từng lớp.</p>';progressIntro.textContent='Đăng nhập để xem thống kê được đồng bộ giữa các thiết bị.';}});
+  window.addEventListener('englishhub:quiz-answer',e=>{const user=currentUser;if(!user)return;const {grade,correct}=e.detail;saveQueue=saveQueue.then(async()=>{const ref=doc(db,'users',user.uid);const snap=await getDoc(ref);if(!snap.exists())await setDoc(ref,{email:user.email,grades:{}},{merge:true});await setDoc(ref,{grades:{[String(grade)]:{answered:increment(1),correct:increment(correct?1:0)}},lastPracticeAt:serverTimestamp()},{merge:true});const fresh=await getDoc(ref);renderProgress(fresh.data()||{});}).catch(err=>message('Không lưu được tiến độ: '+friendlyError(err),true));});
+ } catch(err){authStatus.textContent='Không khởi tạo được Firebase. Hãy kiểm tra cấu hình trong tệp HTML.';message(friendlyError(err),true);}
+}
+</script>
+
 </body>
 </html>
